@@ -1,0 +1,320 @@
+@divide: 10;
+@pswWidth: 414;
+@ppr: (@divide/@pswWidth) * 1rem;
+@color-primary-label: #333;
+@color-secondary-label: rgba(51, 51, 51, 0.8);
+@color-backgroud: #fff;
+@color-tertiary-label: rgba(51, 51, 51, 0.6);
+
+.body {
+    font-size: 14*@ppr;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji, BlinkMacSystemFont, Helvetica Neue, Arial, PingFang SC, PingFang TC, PingFang HK, Microsoft Yahei, Microsoft JhengHei;
+    margin: 0 auto;
+    color: @color-primary-label;
+    background-color: @color-backgroud;
+}
+
+a {
+    text-decoration: none;
+}
+
+// .test {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+
+//     // position: fixed;
+//     left: 0;
+//     top: 0;
+//     z-index: 10;
+//     font-size: 16*@ppr;
+//     font-weight: 600;
+//     align-items: center;
+//     background-color: pink;
+// }
+.page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    align-items: center;
+    background-color: @color-backgroud;
+
+    .header-container {
+        display: flex;
+        width: 414*@ppr;
+        height: 72*@ppr;
+
+
+        .header-content {
+            width: 100%;
+            height: 100%;
+            padding: 0 12*@ppr 0 16*@ppr;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .header-logo {
+                width: auto;
+                height: 32*@ppr;
+            }
+
+            .icon-search {
+                margin-left: auto;
+            }
+
+            .iconfont {
+                width: 20*@ppr;
+                height: 20*@ppr;
+                text-align: center;
+                line-height: 20*@ppr;
+                padding: 0 10*@ppr;
+                font-size: 16*@ppr;
+            }
+        }
+
+    }
+}
+
+
+.page-mainer {
+    display: flex;
+    width: 414*@ppr;
+    height: 100%;
+
+
+
+    .mainer-container {
+        width: 414*@ppr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 12*@ppr;
+        padding-top: 72*@ppr;
+        overflow: hidden;
+
+
+
+        .nav-container {
+            height: 72*@ppr;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+
+
+            font-size: 16*@ppr;
+            color: @color-secondary-label;
+
+            .item-nav {
+                height: 40*@ppr;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 16*@ppr;
+
+            }
+
+            .item-recommend {
+                color: @color-primary-label;
+                background-color: rgba(0, 0, 0, 0.03);
+                border-radius: 999*@ppr;
+                font-weight: 600;
+            }
+
+            .icon-chongwu {
+                width: 28*@ppr;
+                height: 28*@ppr;
+                line-height: 28*@ppr;
+                text-align: center;
+                font-size: 16*@ppr;
+            }
+        }
+
+        .note-container {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            gap: 12*@ppr;
+            flex-wrap: wrap;
+
+            .note-item {
+                width: 189*@ppr;
+            }
+
+            .note-content {
+                position: relative;
+                display: flex;
+                width: 189*@ppr;
+                height: 252*@ppr;
+                border-radius: 12*@ppr;
+                overflow: hidden;
+                outline: 1px solid rgba(0, 0, 0, 0.08);
+                outline-offset: -1px;
+
+                .note-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .note-info {
+                padding: 12*@ppr;
+
+                .note-title {
+                    margin-bottom: 8*@ppr;
+                    word-break: break-all;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
+                    font-weight: 500;
+                    font-size: 14*@ppr;
+                    line-height: 140%;
+                    color: @color-primary-label;
+                }
+
+                .note-autor {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 20*@ppr;
+                    color: @color-secondary-label;
+                    font-size: 12*@ppr;
+
+                    .autor-link {
+                        display: flex;
+                        align-items: center;
+                        color: inherit;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        margin-right: 12*@ppr;
+
+                        .autor-img {
+                            margin-right: 6*@ppr;
+                            width: 20*@ppr;
+                            height: 20*@ppr;
+                            border-radius: 20*@ppr;
+                            border: 1px solid rgba(0, 0, 0, 0.08);
+                            flex-shrink: 0;
+                        }
+
+                        .autor-name {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                    }
+
+                    .autor-like {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .iconfont {
+                        width: 16*@ppr;
+                        height: 16*@ppr;
+                        font-size: 16*@ppr;
+                        text-align: center;
+                        line-height: 16*@ppr;
+                        display: inline-block;
+                        vertical-align: middle;
+                        fill: currentColor;
+                    }
+
+                    .like-count {
+                        margin-left: 2*@ppr;
+                        text-align: center;
+                    }
+                }
+            }
+
+        }
+
+        .btn-set {
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            width: 40*@ppr;
+            gap: 8*@ppr;
+            right: 12*@ppr;
+            bottom: calc(48px + 12*1*@ppr);
+
+            .set-filter {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40*@ppr;
+                height: 40*@ppr ;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+                box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+                border-radius: 44*@ppr;
+                cursor: pointer;
+                background-color: @color-backgroud;
+                color: @color-secondary-label;
+
+
+            }
+
+            .set-reload {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40*@ppr;
+                height: 40*@ppr ;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+                box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+                border-radius: 44*@ppr;
+                cursor: pointer;
+                background-color: @color-backgroud;
+                color: @color-secondary-label;
+            }
+
+            .iconfont {
+                font-size: 16*@ppr;
+            }
+
+        }
+    }
+}
+
+
+
+.page-footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 414*@ppr;
+    background-color: @color-backgroud;
+
+    .channel-list {
+        width: 100%;
+        display: flex;
+        color: @color-tertiary-label;
+
+        .channel-item {
+            flex: 1;
+            height: 48*@ppr;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: @color-primary-label;
+
+            .iconfont {
+                width: 24*@ppr;
+                height: 24*@ppr;
+                text-align: center;
+                line-height: 24*@ppr;
+                font-size: 18*@ppr;
+                color: @color-primary-label;
+            }
+        }
+    }
+
+
+}
